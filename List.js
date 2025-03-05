@@ -23,9 +23,9 @@ class List extends Array {
     return `[ ${this.join(', ')} ]`
   }
   
-  [Symbol.for('nodejs.util.inspect.custom')]() {
-    return [...this];
-  }
+  // [Symbol.for('nodejs.util.inspect.custom')]() {
+  //   return [...this];
+  // }
 }
 
 arr = List.from([1, 2, 3, 4]);
@@ -34,3 +34,7 @@ console.log(arr);
 arr[1] = undefined;
 
 console.log(arr);
+
+arr2 = arr.map(e => e*2);
+arr2[2] = undefined;
+console.log(arr2)
