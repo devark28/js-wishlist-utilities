@@ -2,7 +2,7 @@ function shuffle(arr){
 	set1 = new Set();
 	while(set1.size !== arr.length){
 		set1.add(Math.floor(Math.random() * arr.length));
-  }
+  	}
 	return [...set1].map(p => arr[p]);
 }
 console.log('input:', [1, 2, 3, 4, 5, 6]);
